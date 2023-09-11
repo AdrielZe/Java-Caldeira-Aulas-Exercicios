@@ -10,12 +10,9 @@ public class Exercicio5 {
         do {
             System.out.println("Digite a hora");
             hour = input.nextInt();
-        } while(hour > 24 || hour < 0);
+        } while(hour > 23 || hour < 0);
 
-        if(hour == 24 || hour == 0){
-            minute = 0;
-            second = 0;
-        } else {
+
             do {
                 System.out.println("Digite o minuto");
                 minute = input.nextInt();
