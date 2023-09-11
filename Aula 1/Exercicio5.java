@@ -1,4 +1,3 @@
-
 import java.util.Scanner;
 
 public class Exercicio5 {
@@ -12,7 +11,6 @@ public class Exercicio5 {
             hour = input.nextInt();
         } while(hour > 23 || hour < 0);
 
-
             do {
                 System.out.println("Digite o minuto");
                 minute = input.nextInt();
@@ -22,7 +20,6 @@ public class Exercicio5 {
                 System.out.println("Digite o segundo");
                 second = input.nextInt();
             } while (second > 60 || second < 0);
-        }
 
             int secondsPassed = (hour * 3600) + (minute * 60) + second;
 
