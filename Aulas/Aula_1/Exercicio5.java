@@ -1,3 +1,5 @@
+package Aula_1;
+
 import java.util.Scanner;
 
 public class Exercicio5 {
@@ -26,5 +28,7 @@ public class Exercicio5 {
             System.out.println("Horário: " + hour + ":" + minute + ":" + second);
             System.out.println("Desde a última meia-noite, passaram-se " + secondsPassed + " segundos");
             System.out.println("Para a próxima meia-noite, faltam " + (86400 - secondsPassed) + " segundos");
+
+            input.close();
     }
 }

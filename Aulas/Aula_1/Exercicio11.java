@@ -1,3 +1,5 @@
+package Aula_1;
+
 import java.util.Scanner;
 
 public class Exercicio11 {
@@ -20,6 +22,8 @@ public class Exercicio11 {
         }
 
         System.out.println("A palavra digitada possui " + vowelCounter + " vogais");
+
+        input.close();
 
     }
 }

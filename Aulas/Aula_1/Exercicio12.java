@@ -1,3 +1,5 @@
+package Aula_1;
+
 import java.util.Scanner;
 
 public class Exercicio12 {
@@ -12,5 +14,7 @@ public class Exercicio12 {
         reais = dolar * 5;
 
         System.out.println("Você possui " + reais + " reais.");
+
+        input.close();
     }
 }

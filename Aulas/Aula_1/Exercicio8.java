@@ -1,3 +1,4 @@
+package Aula_1;
 
 import java.util.Scanner;
 
@@ -21,6 +22,8 @@ public class Exercicio8 {
             case 4 -> System.out.println("Você não tem direito à fila prioritária.");
             default -> System.out.println("Opção inválida");
         }
+
+        input.close();
 
     }
 }

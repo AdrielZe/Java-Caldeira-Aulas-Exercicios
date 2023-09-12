@@ -1,3 +1,5 @@
+package Aula_1;
+
 import java.util.Scanner;
 
 public class Exercicio3 {
@@ -20,6 +22,8 @@ public class Exercicio3 {
         System.out.println("O número maior é: " + biggestNumber);
         System.out.println("O número menor é: " + smallestNumber);
         System.out.println("A média aritmética é: " + (numero1+numero2+numero3)/3 );
+
+        entrada.close();
 
     }
 }

@@ -1,3 +1,5 @@
+package Aula_1;
+
 import java.util.Scanner;
 public class Exercicio1 {
     public static void main(String[] args) {
@@ -10,5 +12,6 @@ public class Exercicio1 {
 
         System.out.println("O seu nome é : " + nome);
 
+        entrada.close();
     }
 }

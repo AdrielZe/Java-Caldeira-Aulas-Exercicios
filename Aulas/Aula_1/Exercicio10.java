@@ -1,3 +1,5 @@
+package Aula_1;
+
 import java.util.Scanner;
 
 public class Exercicio10 {
@@ -11,6 +13,8 @@ public class Exercicio10 {
         fahrenheit = (input.nextDouble() * 9/5) + 32;
 
         System.out.println(fahrenheit + " Fahrenheit");
+
+        input.close();
 
     }
 }

@@ -1,3 +1,5 @@
+package Aula_1;
+
 public class Exercicio13Fatorial {
     public static int calculateFactorial(int n){
         if(n == 0){

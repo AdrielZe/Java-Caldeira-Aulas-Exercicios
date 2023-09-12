@@ -1,3 +1,4 @@
+package Aula_1;
 
 import java.util.Scanner;
 
@@ -19,6 +20,8 @@ public class Exercicio7 {
         } else{
             System.out.println("Lamentamos, mas você não atende os requisitos necessários para a realizar a compra de um automóvel");
         }
+
+        input.close();
     }
 
 }

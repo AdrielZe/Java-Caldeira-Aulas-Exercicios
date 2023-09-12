@@ -1,3 +1,5 @@
+package Aula_1;
+
 import java.util.Scanner;
 
 public class Exercicio9 {
@@ -9,6 +11,8 @@ public class Exercicio9 {
         System.out.println("Digite o seu ano de nascimento: ");
         age = 2023 - input.nextInt();
         System.out.println("Você tem " + age + " anos");
+
+        input.close();
 
     }
 }

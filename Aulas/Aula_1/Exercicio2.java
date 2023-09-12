@@ -1,3 +1,5 @@
+package Aula_1;
+
 import java.util.Scanner;
 
 public class Exercicio2 {
@@ -12,5 +14,7 @@ public class Exercicio2 {
         numero2 = entrada.nextInt();
 
         System.out.println("Você digitou os números " + numero1 + " e " + numero2);
+
+        entrada.close();
     }
 }

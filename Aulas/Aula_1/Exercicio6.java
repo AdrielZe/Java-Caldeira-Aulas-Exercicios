@@ -1,3 +1,4 @@
+package Aula_1;
 
 import java.util.Scanner;
 
@@ -18,5 +19,7 @@ public class Exercicio6 {
         } else if (age >= 18 || age <= 65) {
             System.out.println("O seu voto é obrigatório.");
         }
+
+        input.close();
     }
 }

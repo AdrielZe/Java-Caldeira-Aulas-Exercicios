@@ -1,6 +1,7 @@
+package Aula_1;
 
-import java.util.Scanner;
 import java.text.DecimalFormat;
+import java.util.Scanner;
 
 public class Exercicio4 {
 
@@ -14,5 +15,7 @@ public class Exercicio4 {
         numberOfMinimunSalaries = userSalary/1320;
         String roundedValue = new DecimalFormat("#.##").format(numberOfMinimunSalaries);
         System.out.println("O seu salário equivale à " + roundedValue + " salários mínimos");
+
+        input.close();
     }
 }

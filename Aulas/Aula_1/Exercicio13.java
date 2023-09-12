@@ -1,3 +1,5 @@
+package Aula_1;
+
 import java.util.Scanner;
 public class Exercicio13 {
 
@@ -9,5 +11,6 @@ public class Exercicio13 {
         number = input.nextInt();
 
         System.out.println("O fatorial de " + number + " é " + Exercicio13Fatorial.calculateFactorial(number));
+        input.close();
     }
 }
