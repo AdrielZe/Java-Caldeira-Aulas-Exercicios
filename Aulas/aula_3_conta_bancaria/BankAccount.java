@@ -1,56 +1,118 @@
 package aula_3_conta_bancaria;
 
-import java.text.SimpleDateFormat;
+import java.util.Random;
 import java.time.LocalDateTime;
-import java.util.Date;
+
 
 public class BankAccount {
     public LocalDateTime currentTime = LocalDateTime.now();
+    Validacao valida = new Validacao();
+    Random randomId = new Random();
+    private boolean active = false;
     private String name;
-    private long cpf;
+    private String cpf;
     private int accountId;
-    private String bankName;
-    private String address;
-    private double balance;
+    private String bankName = "AdriBank";
+    private String address = "Casa " + " " + Integer.toString(houseNumber);
+    private double balance = 0;
+    static int houseNumber = 1;
+    String activityHistory = "";
 
 
-    public BankAccount(String name, double balance) {
-        this.name = name;
-        this.balance = balance;
+
+
+    public BankAccount(String name, String cpf) {
+        if(valida.validaCpf(cpf)) {
+            System.out.println("Conta criada com sucesso!");
+            this.name = name;
+            this.cpf = cpf;
+            this.accountId = - (randomId.nextInt());
+            this.active = true;
+            houseNumber++;
+        } else{
+            System.out.println("Erro ao criar conta, CPF inválido.");
+        }
     }
 
+
     public void withdraw(double value) {
-        if (this.balance >= value) {
-            this.balance -= value;
-            System.out.println("Saque realizado com sucesso!");
-            System.out.println("Valor total restante na conta: " + this.balance);
+        if(active) {
+            if (this.balance >= value) {
+                this.balance -= value;
+                System.out.println("Saque realizado com sucesso!");
+                System.out.println("Valor total restante na conta: " + this.balance);
+                addToHistory("Saque", value, currentTime);
+            } else {
+                System.out.println("Erro! Saldo insuficiente.");
+
+            }
         } else {
-            System.out.println("Erro! Saldo insuficiente.");
+            System.out.println("Erro. Conta inativa!");
         }
     }
 
     public void deposit(double value) {
-        this.balance += value;
+        if(active) {
+            this.balance += value;
+            addToHistory("Depósito", value, currentTime);
+        }
+        else {
+            System.out.println("Erro. Conta inativa!");
+        }
     }
 
     public void pixTransference(double value, BankAccount account) {
-        if (this.balance >= value) {
-            this.balance -= value;
-            account.balance += value;
-            System.out.println("Transferência realizada com sucesso!");
-        } else {
+        if(active) {
+            if (this.balance >= value) {
+                this.balance -= value;
+                account.balance += value;
+                System.out.println("Transferência PIX realizada com sucesso!");
+                addToHistory("Transferência PIX", value, currentTime);
+            } else {
                 System.out.println("Erro ! Saldo insuficiente.");
+            }
+        }
+        else {
+            System.out.println("Erro. Conta inativa!");
         }
     }
 
     public void transference(double value, BankAccount account) {
-        if (this.balance >= value && (currentTime.getHour() > 8 && currentTime.getHour() < 15)) {
-            this.balance -= value;
-            account.balance += value;
-            System.out.println("Transferência realizada com sucesso!");
-        } else {
-            System.out.println("Erro ! Saldo insuficiente ou fora do horário de transição.");
+        if(active) {
+            if (this.balance >= value && (currentTime.getHour() > 8 && currentTime.getHour() < 19)) {
+                this.balance -= value;
+                account.balance += value;
+                System.out.println("Transferência realizada com sucesso!");
+                addToHistory("Transferência comum", value, currentTime);
+            } else {
+                System.out.println("Erro ! Saldo insuficiente ou fora do horário de transição.");
+            }
         }
+        else {
+            System.out.println("Erro. Conta inativa!");
+        }
+    }
+
+    public void addToHistory(String activity, double value, LocalDateTime currentTime){
+        activityHistory += ("\nOperação: " + activity + " - Valor: R$" + value + " - Horário: " + currentTime);
+    }
+
+    public void closeAccount(){
+        this.active = false;
+        this.balance = 0;
+    }
+
+    public void setBankName(String name){
+        name = this.bankName;
+    }
+    public String getBankName(){
+        return this.bankName;
+    }
+    public boolean getActive(){
+        return this.active;
+    }
+    public String getActivityHistory(){
+        return this.activityHistory;
     }
 
     public double getBalance() {
@@ -62,13 +124,25 @@ public class BankAccount {
     }
 
     public void viewBankAccountInfo() {
-        System.out.println("Account information: ");
-        System.out.println("Name : " + this.name);
-        System.out.println("CPF : " + this.cpf);
-        System.out.println("Account ID : " + this.accountId);
-        System.out.println("Bank : " + this.bankName);
-        System.out.println("Address : " + this.address);
-        System.out.println("Balance : " + this.balance);
-        System.out.println("Current time : " + this.currentTime);
+        if (active) {
+            System.out.println("Informações da conta: ");
+            System.out.println("Nome : " + this.name);
+            System.out.println("CPF : " + this.cpf);
+            System.out.println("ID da conta : " + this.accountId);
+            System.out.println("Banco : " + this.bankName);
+            System.out.println("Endereço : " + this.address);
+            System.out.println("Saldo : R$" + this.balance);
+            System.out.println("Horário atual : " + this.currentTime);
+        }else {
+            System.out.println("Erro. Conta não ativa.");
+        }
+    }
+
+    public void setAddress(String newAddress){
+        this.address = newAddress;
+    }
+    public void setBalance(double balance){
+        this.balance += balance;
     }
 }
+
