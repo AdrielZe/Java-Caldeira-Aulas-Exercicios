@@ -6,13 +6,13 @@ import java.time.LocalDateTime;
 
 public class BankAccount {
     public LocalDateTime currentTime = LocalDateTime.now();
-    Validacao valida = new Validacao();
+    Validator valida = new Validator();
     Random randomId = new Random();
     private boolean active = false;
     private String name;
     private String cpf;
     private int accountId;
-    private String bankName = "AdriBank";
+    private String bankName = "AdrBank";
     private String address = "Casa " + " " + Integer.toString(houseNumber);
     private double balance = 0;
     static int houseNumber = 1;
@@ -27,6 +27,9 @@ public class BankAccount {
             this.name = name;
             this.cpf = cpf;
             this.accountId = - (randomId.nextInt());
+            if(this.accountId < 0){
+                this.accountId = - (this.accountId);
+            }
             this.active = true;
             houseNumber++;
         } else{
@@ -125,6 +128,7 @@ public class BankAccount {
 
     public void viewBankAccountInfo() {
         if (active) {
+            System.out.println("---------------------------");
             System.out.println("Informações da conta: ");
             System.out.println("Nome : " + this.name);
             System.out.println("CPF : " + this.cpf);
@@ -133,6 +137,7 @@ public class BankAccount {
             System.out.println("Endereço : " + this.address);
             System.out.println("Saldo : R$" + this.balance);
             System.out.println("Horário atual : " + this.currentTime);
+            System.out.println("---------------------------\n");
         }else {
             System.out.println("Erro. Conta não ativa.");
         }
