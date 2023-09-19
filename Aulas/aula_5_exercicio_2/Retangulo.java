@@ -1,16 +1,16 @@
-package Aula_5_exercicio_2;
+package aula_5_exercicio_2;
 
-public class Quadrado extends FormaGeometrica{
+public class Retangulo extends FormaGeometrica{
     private final double base;
     private final double height;
 
-    public Quadrado(double base, double height){
+    public Retangulo(double base,double height){
         this.base = base;
         this.height = height;
     }
 
     @Override
     public double calculateArea(){
-        return (this.base * this.height);
+        return this.base * this.height;
     }
 }
