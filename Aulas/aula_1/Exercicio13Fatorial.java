@@ -1,4 +1,4 @@
-package Aula_1;
+package aula_1;
 
 public class Exercicio13Fatorial {
     public static int calculateFactorial(int n){
