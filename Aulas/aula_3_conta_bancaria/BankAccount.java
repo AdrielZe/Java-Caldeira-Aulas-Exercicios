@@ -3,8 +3,7 @@ package aula_3_conta_bancaria;
 import java.util.Random;
 import java.time.LocalDateTime;
 
-
-public class BankAccount {
+public abstract class BankAccount {
     public LocalDateTime currentTime = LocalDateTime.now();
     Validator valida = new Validator();
     Random randomId = new Random();
