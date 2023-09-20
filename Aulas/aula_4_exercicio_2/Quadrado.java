@@ -1,4 +1,4 @@
-package aula_5_exercicio_2;
+package aula_4_exercicio_2;
 
 public class Quadrado extends FormaGeometrica{
     private final double base;
