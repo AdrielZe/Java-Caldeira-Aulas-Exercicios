@@ -12,6 +12,5 @@ public class Main {
           gerenciadorDoAdriel.adicionar(contaDoAdriel.calculateTribute(contaDoAdriel.getActive()));
 
           System.out.println(gerenciadorDoAdriel.getTaxesSum());
-
     }
  }
