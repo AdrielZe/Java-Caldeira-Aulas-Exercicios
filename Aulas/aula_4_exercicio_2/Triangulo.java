@@ -13,4 +13,8 @@ public class Triangulo extends FormaGeometrica{
     public double calculateArea(){
         return (this.base * this.height) / 2;
     }
+
+    public String getNome(){
+        return "Triangulo";
+    }
 }

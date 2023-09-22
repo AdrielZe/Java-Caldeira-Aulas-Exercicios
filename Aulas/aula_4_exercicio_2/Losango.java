@@ -13,4 +13,8 @@ public class Losango extends FormaGeometrica{
     public double calculateArea(){
         return (this.biggerDiagonal * this.smallerDiagonal) / 2;
     }
+
+    public String getNome(){
+        return "Losango";
+    }
 }

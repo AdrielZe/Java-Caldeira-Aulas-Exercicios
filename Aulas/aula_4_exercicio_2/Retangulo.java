@@ -13,4 +13,8 @@ public class Retangulo extends FormaGeometrica{
     public double calculateArea(){
         return this.base * this.height;
     }
+
+    public String getNome(){
+        return "Retangulo";
+    }
 }

@@ -13,4 +13,8 @@ public class Quadrado extends FormaGeometrica{
     public double calculateArea(){
         return (this.base * this.height);
     }
+
+    public String getNome(){
+        return "Quadrado";
+    }
 }

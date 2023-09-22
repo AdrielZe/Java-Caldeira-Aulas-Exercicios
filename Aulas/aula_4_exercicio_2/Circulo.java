@@ -11,4 +11,8 @@ public class Circulo extends FormaGeometrica {
     public double calculateArea(){
         return Math.PI * (radius * radius);
     }
+
+    public String getNome(){
+        return "Círculo";
+    }
 }
