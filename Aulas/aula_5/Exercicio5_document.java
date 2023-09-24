@@ -1,5 +1,7 @@
 package aula_5;
 
+import java.util.LinkedList;
+
 public class Exercicio5_document {
     private String nameOfOwner;
     private int pageNumbers;
@@ -8,6 +10,7 @@ public class Exercicio5_document {
         this.nameOfOwner = nameOfOwner;
         this.pageNumbers = pageNumbers;
     }
+
 
     public String getNameOfOwner() {
         return nameOfOwner;
