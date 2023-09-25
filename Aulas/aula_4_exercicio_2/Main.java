@@ -3,9 +3,9 @@ package aula_4_exercicio_2;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Main {
+public class  Main {
     public static void main(String[] args) {
-        ArrayList<Object> lista = new ArrayList<>();
+        ArrayList<FormaGeometrica> lista = new ArrayList<>();
 
         Retangulo retangulo = new Retangulo(5,3);
 
@@ -23,9 +23,8 @@ public class Main {
         lista.add(triangulo);
         lista.add(losango);
 
-        for (Object o : lista) {
-            FormaGeometrica forma = (FormaGeometrica) o;
-            System.out.println("A área do " + (forma.getNome()) + " é: " + forma.calculateArea());
+        for (FormaGeometrica formaGeometrica : lista) {
+            System.out.println("A área do: " + formaGeometrica.getNome() + " é de: " + formaGeometrica.calculateArea());
         }
     }
 }
