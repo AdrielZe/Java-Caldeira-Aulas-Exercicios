@@ -72,12 +72,8 @@ public class Exercicio3 {
                 case 4 -> System.out.println("Encerrando programa.");
 
                 default -> System.out.println("Opção inválida. Digite uma opção válida.");
-
-
-
             }
         } while (option != 4);
-
     }
 }
 

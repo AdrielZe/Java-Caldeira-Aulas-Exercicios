@@ -71,7 +71,6 @@ public class Exercicio4 {
                 default -> System.out.println("Opção inválida. Digite uma opção válida.");
             }
         } while (option != 4);
-
     }
 }
 
