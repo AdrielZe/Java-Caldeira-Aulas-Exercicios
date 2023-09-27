@@ -1,12 +1,17 @@
 package aula_6;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
 public class Exercicio2_imprimeTerceiraIdade {
-    public void imprimeTerceiraIdade(HashMap<String,Integer> client){
-        for (client : client.entrySet()){
-            String key = client.getKey();
-        }
+    public void imprimeTerceiraIdade(Map<String, Integer> clients, ArrayList<String> list){
+       for (Map.Entry<String,Integer> entrada : clients.entrySet()){
+           if (list.contains(entrada.getKey())){
+               if (entrada.getValue() >= 60){
+                   System.out.println(entrada.getKey() + " é da terceira idade");
+               }
+           }
+       }
     }
 }
