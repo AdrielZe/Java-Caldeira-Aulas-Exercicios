@@ -1,6 +1,6 @@
 package aula_7;
 
-public interface exercicio4Calculavel {
+public interface Exercicio4Calculavel {
     public static int sum(int n1,int n2) {
         return (n1+n2);
     }

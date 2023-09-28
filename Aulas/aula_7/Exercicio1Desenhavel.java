@@ -1,5 +1,5 @@
 package aula_7;
 
-public interface exercicio1Desenhavel {
+public interface Exercicio1Desenhavel {
     void desenhar();
 }

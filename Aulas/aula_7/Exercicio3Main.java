@@ -21,7 +21,7 @@ public class Exercicio3Main {
                 operation= input.nextLine().toUpperCase();
                 operation= input.nextLine().toUpperCase();
 
-                System.out.println("O  resultado da " + operation + " é: " + exercicio4Enum.realizaOperacao(exercicio4Enum.valueOf(operation),n1,n2));
+                System.out.println("O  resultado da " + operation + " é: " + Exercicio4Enum.realizaOperacao(Exercicio4Enum.valueOf(operation),n1,n2));
 
                 loop = false;
             } catch (Exception ex) {
