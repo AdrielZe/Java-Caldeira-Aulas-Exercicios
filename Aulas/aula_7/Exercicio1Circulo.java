@@ -1,6 +1,6 @@
 package aula_7;
 
-public class Exercicio1_circulo {
+public class Exercicio1Circulo {
     public String nomeDaForma = "Círculo";
 
     public void desenhar(){
