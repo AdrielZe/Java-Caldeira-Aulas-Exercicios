@@ -5,12 +5,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Exercicio2_imprimeTerceiraIdade {
-    public void imprimeTerceiraIdade(Map<String, Integer> clients, ArrayList<String> list){
+    public void imprimeTerceiraIdade(Map<String, Integer> clients){
        for (Map.Entry<String,Integer> entrada : clients.entrySet()){
-           if (list.contains(entrada.getKey())){
-               if (entrada.getValue() >= 60){
-                   System.out.println(entrada.getKey() + " é da terceira idade");
-               }
+           if (entrada.getValue() >= 60){
+               System.out.println(entrada.getKey() + " é da terceira idade.");
            }
        }
     }

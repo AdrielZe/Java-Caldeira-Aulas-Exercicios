@@ -8,7 +8,6 @@ import java.util.Scanner;
 public class Exercicio2 {
     public static void main(String[] args) {
         HashMap<String, Integer> clients = new HashMap<String,Integer>();
-        ArrayList<String> list = new ArrayList<String>();
         Scanner input = new Scanner(System.in);
         String nameToSearch = "";
 
@@ -19,12 +18,9 @@ public class Exercicio2 {
         clients.put("Arthur", 60);
         clients.put("Otavio", 19);
 
-        for (Map.Entry<String,Integer> entrada: clients.entrySet() ){
-            list.add(entrada.getKey());
-        }
 
-        for (Map.Entry<String,Integer> entrada: clients.entrySet() ){
-            System.out.println(entrada.getKey());
+        for (Map.Entry<String,Integer> clienteAtual: clients.entrySet() ){
+            System.out.println(clienteAtual.getKey());
         }
 
         System.out.println("\nDigite um nome presente na lista para descobrir a idade: ");
@@ -39,6 +35,6 @@ public class Exercicio2 {
         System.out.println("\nPessoas da lista que são da terceira idade: \n");
         Exercicio2_imprimeTerceiraIdade imprime = new Exercicio2_imprimeTerceiraIdade();
 
-        imprime.imprimeTerceiraIdade(clients,list);
+        imprime.imprimeTerceiraIdade(clients);
     }
 }
