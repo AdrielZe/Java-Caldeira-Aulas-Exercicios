@@ -14,12 +14,8 @@ public class Main {
         strings.add("Janta");
         strings.add("Café");
         strings.add("Café");
-        strings.add("Café");
         strings.add("Almoço");
         strings.add("Almoço");
-        strings.add("Água");
-        strings.add("Água");
-        strings.add("Água");
         strings.add("Água");
         strings.add("Água");
         strings.add("Suco");
