@@ -1,4 +1,4 @@
-package Aula_8_Exercicio1_Maven;
+package aula_8_exercicio1_maven;
 
 import java.util.ArrayList;
 import java.util.Comparator;
