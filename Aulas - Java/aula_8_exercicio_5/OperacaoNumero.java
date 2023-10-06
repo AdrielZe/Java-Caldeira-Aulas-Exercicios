@@ -1,7 +1,7 @@
 package aula_8_exercicio_5;
 
 public class OperacaoNumero {
-
+//.
     // Método 1: Calcular a soma de uma lista de números inteiros.
     public int somarNumeros(int[] numeros) {
         int soma = 0;
