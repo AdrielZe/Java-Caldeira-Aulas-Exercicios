@@ -1,4 +1,4 @@
-package aula_8_exercicio3_teste_unitario;
+package aula_8_exercicio3_e_4_teste_unitario;
 
 
 import org.junit.Assert;
