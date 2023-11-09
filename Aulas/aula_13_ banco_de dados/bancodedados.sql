@@ -106,6 +106,9 @@ GROUP BY clientes.nome
 
 -- Atualize os preços dos produtos na tabela "Produtos" com base em um aumento percentual específico.
 
+UPDATE produtos
+SET preco = preco + preco * 0.10
+
 
 -- Crie uma consulta que retorne a lista de produtos mais vendidos com base na contagem de pedidos na tabela "Produtos" e "DetalhesDoPedido".
 
