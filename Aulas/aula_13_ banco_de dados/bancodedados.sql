@@ -112,6 +112,13 @@ SET preco = preco + preco * 0.10
 
 -- Crie uma consulta que retorne a lista de produtos mais vendidos com base na contagem de pedidos na tabela "Produtos" e "DetalhesDoPedido".
 
+SELECT produtos.nome, SUM(quantidade) as total
+FROM detalhesdopedido
+JOIN produtos
+ON detalhesdopedido.id_produto = produtos.id_produto
+GROUP BY produtos.nome
+ORDER BY total DESC
+
 
 -- Crie uma consulta que calcule a média, a mediana e o desvio padrão dos preços dos produtos na tabela "Produtos".
 
