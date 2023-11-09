@@ -1,6 +1,6 @@
 -- criacao das tabelas (Level 1)
 
-CREATE TABLE clientes(id VARCHAR(6) PRIMARY KEY, nome VARCHAR(50), email VARCHAR(50), telefone VARCHAR(50));
+CREATE TABLE clientes(id_cliente VARCHAR(6) PRIMARY KEY, nome VARCHAR(50), email VARCHAR(50), telefone VARCHAR(50));
 
 
 CREATE TABLE Produtos(id_pedido VARCHAR(6) PRIMARY KEY, nome  VARCHAR(50),preco float, categoria VARCHAR(50));
