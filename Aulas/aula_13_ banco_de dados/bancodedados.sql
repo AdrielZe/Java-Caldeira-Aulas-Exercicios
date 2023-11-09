@@ -3,7 +3,7 @@
 CREATE TABLE clientes(id_cliente VARCHAR(6) PRIMARY KEY, nome VARCHAR(50), email VARCHAR(50), telefone VARCHAR(50));
 
 
-CREATE TABLE Produtos(id_pedido VARCHAR(6) PRIMARY KEY, nome  VARCHAR(50),preco float, categoria VARCHAR(50));
+CREATE TABLE produtos(id_produto VARCHAR(6) PRIMARY KEY, nome  VARCHAR(50),preco float, categoria VARCHAR(50));
 
 
 CREATE TABLE pedidos(id_pedido VARCHAR(6) PRIMARY KEY, data_pedido DATE, valor_total float, id_cliente VARCHAR(6) REFERENCES 
