@@ -135,8 +135,26 @@ WHERE data_pedido BETWEEN '2022-11-09' AND '2023-11-09'
 
 -- Crie uma consulta que identifique os clientes que não fizeram nenhum pedido nos últimos 6 meses na tabela "Clientes" e "Pedidos".
 
+SELECT nome
+FROM clientes
+JOIN pedidos
+ON pedidos.id_cliente = clientes.id_cliente
+WHERE data_pedido <= CURRENT_DATE - INTERVAL '6' MONTH
+
 
 -- Crie uma consulta que classifique os produtos na tabela "Produtos" com base em seu preço, em ordem decrescente.
 
+SELECT nome,preco
+FROM produtos
+ORDER BY preco DESC
+
 
 -- Crie uma consulta que retorne o total de vendas por categoria de produto na tabela "Produtos" e "DetalhesDoPedido".
+
+SELECT categoria, SUM(quantidade) as total_de_vendas
+FROM detalhesdopedido
+JOIN produtos
+ON detalhesdopedido.id_produto = produtos.id_produto
+GROUP BY categoria
+
+
