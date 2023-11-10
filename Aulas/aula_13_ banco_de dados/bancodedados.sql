@@ -122,6 +122,9 @@ ORDER BY total DESC
 
 -- Crie uma consulta que calcule a média, a mediana e o desvio padrão dos preços dos produtos na tabela "Produtos".
 
+SELECT AVG(preco) AS media
+FROM produtos
+
 
 -- Selecione todos os pedidos feitos em um período de tempo específico, usando a tabela "Pedidos" e um intervalo de datas.
 
