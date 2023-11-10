@@ -128,6 +128,10 @@ FROM produtos
 
 -- Selecione todos os pedidos feitos em um período de tempo específico, usando a tabela "Pedidos" e um intervalo de datas.
 
+SELECT *
+FROM pedidos
+WHERE data_pedido BETWEEN '2022-11-09' AND '2023-11-09' 
+
 
 -- Crie uma consulta que identifique os clientes que não fizeram nenhum pedido nos últimos 6 meses na tabela "Clientes" e "Pedidos".
 
